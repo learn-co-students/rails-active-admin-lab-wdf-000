@@ -4,7 +4,7 @@ class ArtistsController < ApplicationController
 
   def show
   end
-
+=begin
   def new
     @artist = Artist.new
   end
@@ -41,7 +41,7 @@ class ArtistsController < ApplicationController
     flash[:notice] = "Artist deleted."
     redirect_to artists_path
   end
-
+=end
   private
 
   def artist_params
