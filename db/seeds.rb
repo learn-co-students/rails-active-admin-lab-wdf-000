@@ -21,3 +21,5 @@ songs = [{artist_name: "The Killers", title: "Mr. Brightside"},
 songs.each do |song|
   Song.create(song)
 end
+
+user1 = AdminUser.create(email: "admin@example.com", password: "123123123")
