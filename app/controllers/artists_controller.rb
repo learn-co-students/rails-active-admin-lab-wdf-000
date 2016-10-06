@@ -3,44 +3,46 @@ class ArtistsController < ApplicationController
   end
 
   def show
-  end
-
-  def new
-    @artist = Artist.new
-  end
-
-  def create
-    @artist = Artist.new(artist_params)
-
-    if @artist.save
-      redirect_to @artist
-    else
-      render :new
+    if !["new", "edit"].include?(params[:action])
     end
   end
 
-  def edit
-    @artist = Artist.find(params[:id])
-  end
+  # def new
+  #   @artist = Artist.new
+  # end
 
-  def update
-    @artist = Artist.find(params[:id])
+  # def create
+  #   @artist = Artist.new(artist_params)
 
-    @artist.update(artist_params)
+  #   if @artist.save
+  #     redirect_to @artist
+  #   else
+  #     render :new
+  #   end
+  # end
 
-    if @artist.save
-      redirect_to @artist
-    else
-      render :edit
-    end
-  end
+  # def edit
+  #   @artist = Artist.find(params[:id])
+  # end
 
-  def destroy
-    @artist = Artist.find(params[:id])
-    @artist.destroy
-    flash[:notice] = "Artist deleted."
-    redirect_to artists_path
-  end
+  # def update
+  #   @artist = Artist.find(params[:id])
+
+  #   @artist.update(artist_params)
+
+  #   if @artist.save
+  #     redirect_to @artist
+  #   else
+  #     render :edit
+  #   end
+  # end
+
+  # def destroy
+  #   @artist = Artist.find(params[:id])
+  #   @artist.destroy
+  #   flash[:notice] = "Artist deleted."
+  #   redirect_to artists_path
+  # end
 
   private
 
