@@ -9,7 +9,7 @@ RSpec.describe "ActiveAdmin" do
 
   let(:resource_class) { Artist }
   let(:all_resources)  { ActiveAdmin.application.namespaces[:admin].resources }
-  let(:resource)       { all_resources[resource_class] } 
+  let(:resource)       { all_resources[resource_class] }
 
   it "Artists should not be deletable" do
     expect(resource.defined_actions).not_to include :destroy
