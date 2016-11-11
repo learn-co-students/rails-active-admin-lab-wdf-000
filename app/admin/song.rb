@@ -5,6 +5,7 @@ ActiveAdmin.register Song do
 #
 # permit_params :list, :of, :attributes, :on, :model
 #
+  permit_params :title, :artist_id
 # or
 #
 # permit_params do

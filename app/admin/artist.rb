@@ -8,6 +8,7 @@ ActiveAdmin.register Artist do
 # or
 #
   actions :all, except: [:destroy]
+  permit_params :name
 # permit_params do
 #   permitted = [:permitted, :attributes]
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
